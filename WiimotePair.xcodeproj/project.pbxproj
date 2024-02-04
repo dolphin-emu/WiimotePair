@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B996B9A62B6D86AC00E50C3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B996B9A52B6D86AC00E50C3B /* AppDelegate.m */; };
+		B996B9A92B6D86AC00E50C3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B996B9A82B6D86AC00E50C3B /* ViewController.m */; };
+		B996B9AB2B6D86AF00E50C3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B996B9AA2B6D86AF00E50C3B /* Assets.xcassets */; };
+		B996B9AE2B6D86AF00E50C3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B996B9AC2B6D86AF00E50C3B /* Main.storyboard */; };
+		B996B9B02B6D86AF00E50C3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B996B9AF2B6D86AF00E50C3B /* main.m */; };
+		B996B9BB2B70494F00E50C3B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B996B9BA2B70494F00E50C3B /* Credits.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B996B9A12B6D86AC00E50C3B /* WiimotePair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiimotePair.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B996B9A42B6D86AC00E50C3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B996B9A52B6D86AC00E50C3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B996B9A72B6D86AC00E50C3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B996B9A82B6D86AC00E50C3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B996B9AA2B6D86AF00E50C3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B996B9AD2B6D86AF00E50C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B996B9AF2B6D86AF00E50C3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B996B9B12B6D86AF00E50C3B /* WiimotePair.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WiimotePair.entitlements; sourceTree = "<group>"; };
+		B996B9B72B6DA5DC00E50C3B /* IOBluetoothCoreBluetoothCoordinator+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetoothCoreBluetoothCoordinator+Private.h"; sourceTree = "<group>"; };
+		B996B9B82B6DA60400E50C3B /* IOBluetoothDevice+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetoothDevice+Private.h"; sourceTree = "<group>"; };
+		B996B9B92B6DA62B00E50C3B /* IOBluetoothDevicePair+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetoothDevicePair+Private.h"; sourceTree = "<group>"; };
+		B996B9BA2B70494F00E50C3B /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B996B99E2B6D86AC00E50C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B996B9982B6D86AC00E50C3B = {
+			isa = PBXGroup;
+			children = (
+				B996B9A32B6D86AC00E50C3B /* WiimotePair */,
+				B996B9A22B6D86AC00E50C3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B996B9A22B6D86AC00E50C3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B996B9A12B6D86AC00E50C3B /* WiimotePair.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B996B9A32B6D86AC00E50C3B /* WiimotePair */ = {
+			isa = PBXGroup;
+			children = (
+				B996B9A42B6D86AC00E50C3B /* AppDelegate.h */,
+				B996B9A52B6D86AC00E50C3B /* AppDelegate.m */,
+				B996B9B72B6DA5DC00E50C3B /* IOBluetoothCoreBluetoothCoordinator+Private.h */,
+				B996B9B82B6DA60400E50C3B /* IOBluetoothDevice+Private.h */,
+				B996B9B92B6DA62B00E50C3B /* IOBluetoothDevicePair+Private.h */,
+				B996B9A72B6D86AC00E50C3B /* ViewController.h */,
+				B996B9A82B6D86AC00E50C3B /* ViewController.m */,
+				B996B9AA2B6D86AF00E50C3B /* Assets.xcassets */,
+				B996B9BA2B70494F00E50C3B /* Credits.rtf */,
+				B996B9AC2B6D86AF00E50C3B /* Main.storyboard */,
+				B996B9AF2B6D86AF00E50C3B /* main.m */,
+				B996B9B12B6D86AF00E50C3B /* WiimotePair.entitlements */,
+			);
+			path = WiimotePair;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B996B9A02B6D86AC00E50C3B /* WiimotePair */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B996B9B42B6D86AF00E50C3B /* Build configuration list for PBXNativeTarget "WiimotePair" */;
+			buildPhases = (
+				B996B99D2B6D86AC00E50C3B /* Sources */,
+				B996B99E2B6D86AC00E50C3B /* Frameworks */,
+				B996B99F2B6D86AC00E50C3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiimotePair;
+			productName = WiimotePair;
+			productReference = B996B9A12B6D86AC00E50C3B /* WiimotePair.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B996B9992B6D86AC00E50C3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					B996B9A02B6D86AC00E50C3B = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = B996B99C2B6D86AC00E50C3B /* Build configuration list for PBXProject "WiimotePair" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B996B9982B6D86AC00E50C3B;
+			productRefGroup = B996B9A22B6D86AC00E50C3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B996B9A02B6D86AC00E50C3B /* WiimotePair */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B996B99F2B6D86AC00E50C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B996B9AB2B6D86AF00E50C3B /* Assets.xcassets in Resources */,
+				B996B9BB2B70494F00E50C3B /* Credits.rtf in Resources */,
+				B996B9AE2B6D86AF00E50C3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B996B99D2B6D86AC00E50C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B996B9A92B6D86AC00E50C3B /* ViewController.m in Sources */,
+				B996B9B02B6D86AF00E50C3B /* main.m in Sources */,
+				B996B9A62B6D86AC00E50C3B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B996B9AC2B6D86AF00E50C3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B996B9AD2B6D86AF00E50C3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B996B9B22B6D86AF00E50C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B996B9B32B6D86AF00E50C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B996B9B52B6D86AF00E50C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiimotePair/WiimotePair.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 97835T4369;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect to Wii Remotes.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024+ Dolphin Team. \"Wii\" is a trademark of Nintendo. Dolphin is not affiliated with Nintendo in any way.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.dolphin-emu.WiimotePair";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		B996B9B62B6D86AF00E50C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiimotePair/WiimotePair.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 97835T4369;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect to Wii Remotes.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024+ Dolphin Team. \"Wii\" is a trademark of Nintendo. Dolphin is not affiliated with Nintendo in any way.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.dolphin-emu.WiimotePair";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B996B99C2B6D86AC00E50C3B /* Build configuration list for PBXProject "WiimotePair" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B996B9B22B6D86AF00E50C3B /* Debug */,
+				B996B9B32B6D86AF00E50C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B996B9B42B6D86AF00E50C3B /* Build configuration list for PBXNativeTarget "WiimotePair" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B996B9B52B6D86AF00E50C3B /* Debug */,
+				B996B9B62B6D86AF00E50C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B996B9992B6D86AC00E50C3B /* Project object */;
+}
