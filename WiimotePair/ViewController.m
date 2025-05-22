@@ -171,6 +171,22 @@
         [self showPairingResultAlertWithTitle:@"Pairing Error" text:[NSString stringWithFormat:@"An error occurred while attempting to pair: \"%s\".", pairResultString]];
     } else {
         [self showPairingResultAlertWithTitle:@"Paired" text:@"The Wii Remote has been paired with your Mac."];
+        // Attempt to connect to the device after pairing
+        IOBluetoothDevice *pairedDevice = [sender device];
+        [self connectToDevice:pairedDevice];
+    }
+}
+
+- (void)connectToDevice:(IOBluetoothDevice *)device {
+    if (device.isConnected) return;
+
+    IOReturn connectResult = [device openConnection];
+    if (connectResult == kIOReturnSuccess) {
+        [self showPairingResultAlertWithTitle:@"Connected" text:@"The Wii Remote has been connected with your Mac."];
+    }
+    else {
+        char *connectResultString = mach_error_string(connectResult);
+        [self showPairingResultAlertWithTitle:@"Connection Error" text:[NSString stringWithFormat:@"An error occurred while attempting to connect: \"%s\".", connectResultString]];
     }
 }
 
