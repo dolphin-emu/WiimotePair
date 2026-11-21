@@ -7,28 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B996B9A62B6D86AC00E50C3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B996B9A52B6D86AC00E50C3B /* AppDelegate.m */; };
-		B996B9A92B6D86AC00E50C3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B996B9A82B6D86AC00E50C3B /* ViewController.m */; };
+		004533C302A02967C9BB7659 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417BCDAC7B953CD847D9DA /* Log.swift */; };
+		243D5C0406B65561BB5DF345 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7089C848CD53104D5F19785 /* BluetoothManager.swift */; };
+		3F4C192E9A01B5BB7E965BCB /* RemoteDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D85CEE0EA2C12CBB79852 /* RemoteDevice.swift */; };
+		48FB0203B3638EF5400C4341 /* WiiRemoteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF8EBB8DA683D3964A4C6E /* WiiRemoteIcon.swift */; };
+		5468929468B2E0B4F2AF4FC2 /* WiimotePairApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02190D759A791066DCFB5FAE /* WiimotePairApp.swift */; };
+		5B14DCA2822429BA90C72B58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3A488E9714E838A265E0A4 /* ContentView.swift */; };
+		B329C55A4BB6E9A5141E2379 /* WiimoteHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ED5AD36532C20DA86CD9DA /* WiimoteHID.swift */; };
 		B996B9AB2B6D86AF00E50C3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B996B9AA2B6D86AF00E50C3B /* Assets.xcassets */; };
-		B996B9AE2B6D86AF00E50C3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B996B9AC2B6D86AF00E50C3B /* Main.storyboard */; };
-		B996B9B02B6D86AF00E50C3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B996B9AF2B6D86AF00E50C3B /* main.m */; };
 		B996B9BB2B70494F00E50C3B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B996B9BA2B70494F00E50C3B /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00DF31A6DCE80E03B916ACAF /* WiimotePair-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiimotePair-Bridging-Header.h"; sourceTree = "<group>"; };
+		02190D759A791066DCFB5FAE /* WiimotePairApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiimotePairApp.swift; sourceTree = "<group>"; };
+		079D85CEE0EA2C12CBB79852 /* RemoteDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDevice.swift; sourceTree = "<group>"; };
+		59ED5AD36532C20DA86CD9DA /* WiimoteHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiimoteHID.swift; sourceTree = "<group>"; };
 		B996B9A12B6D86AC00E50C3B /* WiimotePair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiimotePair.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B996B9A42B6D86AC00E50C3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B996B9A52B6D86AC00E50C3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B996B9A72B6D86AC00E50C3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B996B9A82B6D86AC00E50C3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B996B9AA2B6D86AF00E50C3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B996B9AD2B6D86AF00E50C3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B996B9AF2B6D86AF00E50C3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B996B9B12B6D86AF00E50C3B /* WiimotePair.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WiimotePair.entitlements; sourceTree = "<group>"; };
 		B996B9B72B6DA5DC00E50C3B /* IOBluetoothCoreBluetoothCoordinator+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetoothCoreBluetoothCoordinator+Private.h"; sourceTree = "<group>"; };
 		B996B9B82B6DA60400E50C3B /* IOBluetoothDevice+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetoothDevice+Private.h"; sourceTree = "<group>"; };
 		B996B9B92B6DA62B00E50C3B /* IOBluetoothDevicePair+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOBluetoothDevicePair+Private.h"; sourceTree = "<group>"; };
 		B996B9BA2B70494F00E50C3B /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		C2BF8EBB8DA683D3964A4C6E /* WiiRemoteIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiiRemoteIcon.swift; sourceTree = "<group>"; };
+		C7089C848CD53104D5F19785 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		FF3A488E9714E838A265E0A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FF417BCDAC7B953CD847D9DA /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +66,19 @@
 		B996B9A32B6D86AC00E50C3B /* WiimotePair */ = {
 			isa = PBXGroup;
 			children = (
-				B996B9A42B6D86AC00E50C3B /* AppDelegate.h */,
-				B996B9A52B6D86AC00E50C3B /* AppDelegate.m */,
+				02190D759A791066DCFB5FAE /* WiimotePairApp.swift */,
+				C7089C848CD53104D5F19785 /* BluetoothManager.swift */,
+				59ED5AD36532C20DA86CD9DA /* WiimoteHID.swift */,
+				079D85CEE0EA2C12CBB79852 /* RemoteDevice.swift */,
+				FF3A488E9714E838A265E0A4 /* ContentView.swift */,
+				C2BF8EBB8DA683D3964A4C6E /* WiiRemoteIcon.swift */,
+				FF417BCDAC7B953CD847D9DA /* Log.swift */,
+				00DF31A6DCE80E03B916ACAF /* WiimotePair-Bridging-Header.h */,
 				B996B9B72B6DA5DC00E50C3B /* IOBluetoothCoreBluetoothCoordinator+Private.h */,
 				B996B9B82B6DA60400E50C3B /* IOBluetoothDevice+Private.h */,
 				B996B9B92B6DA62B00E50C3B /* IOBluetoothDevicePair+Private.h */,
-				B996B9A72B6D86AC00E50C3B /* ViewController.h */,
-				B996B9A82B6D86AC00E50C3B /* ViewController.m */,
 				B996B9AA2B6D86AF00E50C3B /* Assets.xcassets */,
 				B996B9BA2B70494F00E50C3B /* Credits.rtf */,
-				B996B9AC2B6D86AF00E50C3B /* Main.storyboard */,
-				B996B9AF2B6D86AF00E50C3B /* main.m */,
 				B996B9B12B6D86AF00E50C3B /* WiimotePair.entitlements */,
 			);
 			path = WiimotePair;
@@ -104,10 +111,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					B996B9A02B6D86AC00E50C3B = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -136,7 +145,6 @@
 			files = (
 				B996B9AB2B6D86AF00E50C3B /* Assets.xcassets in Resources */,
 				B996B9BB2B70494F00E50C3B /* Credits.rtf in Resources */,
-				B996B9AE2B6D86AF00E50C3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,24 +155,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B996B9A92B6D86AC00E50C3B /* ViewController.m in Sources */,
-				B996B9B02B6D86AF00E50C3B /* main.m in Sources */,
-				B996B9A62B6D86AC00E50C3B /* AppDelegate.m in Sources */,
+				5468929468B2E0B4F2AF4FC2 /* WiimotePairApp.swift in Sources */,
+				243D5C0406B65561BB5DF345 /* BluetoothManager.swift in Sources */,
+				B329C55A4BB6E9A5141E2379 /* WiimoteHID.swift in Sources */,
+				3F4C192E9A01B5BB7E965BCB /* RemoteDevice.swift in Sources */,
+				5B14DCA2822429BA90C72B58 /* ContentView.swift in Sources */,
+				48FB0203B3638EF5400C4341 /* WiiRemoteIcon.swift in Sources */,
+				004533C302A02967C9BB7659 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B996B9AC2B6D86AF00E50C3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B996B9AD2B6D86AF00E50C3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B996B9B22B6D86AF00E50C3B /* Debug */ = {
@@ -225,6 +226,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -279,6 +282,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -297,17 +301,18 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect to Wii Remotes.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024+ Dolphin Team. \"Wii\" is a trademark of Nintendo. Dolphin is not affiliated with Nintendo in any way.";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.dolphin-emu.WiimotePair";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WiimotePair/WiimotePair-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -326,17 +331,18 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect to Wii Remotes.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024+ Dolphin Team. \"Wii\" is a trademark of Nintendo. Dolphin is not affiliated with Nintendo in any way.";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.dolphin-emu.WiimotePair";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WiimotePair/WiimotePair-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
