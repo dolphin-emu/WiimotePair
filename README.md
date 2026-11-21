@@ -8,7 +8,7 @@ The latest download can be found [here](https://github.com/dolphin-emu/WiimotePa
 
 ## Features
 
-- **Pairing:** finds a remote in sync mode and pairs it, retrying automatically if pairing fails.
+- **Pairing:** finds a remote in sync mode, pairs it, and connects to it as soon as pairing finishes.
 - **Connection management:** connect, disconnect, and see the live connection state of every paired remote.
 - **Auto-connect:** optionally connects to paired remotes when the app opens.
 - **Live status:** battery level, extension (e.g. Nunchuk) detection, and the current player LED.
@@ -29,6 +29,8 @@ After pairing, pressing any button on the remote reconnects it to your Mac, even
 ## Troubleshooting
 
 - **The remote isn't found:** press SYNC again; sync mode only lasts about 20 seconds. Make sure the remote isn't connected to a nearby Wii.
+- **"The remote rejected the PIN":** use the red SYNC button, not ① + ②. Holding ① + ② makes the remote discoverable too, but it then expects a different PIN and won't remember your Mac.
+- **"The remote refused to pair":** after failed pairing attempts, the remote temporarily refuses this Mac. Take its batteries out for a few seconds and put them back to reset it.
 - **The remote paired but didn't connect:** press any button on it.
 - **"Status unavailable":** macOS connected the remote without starting its HID profile. WiimotePair retries this automatically; if it still shows, disconnect and reconnect the remote.
 - **Anything else:** use **Forget This Remote…** from the remote's "…" menu and pair it again.

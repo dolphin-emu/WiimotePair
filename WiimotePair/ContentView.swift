@@ -277,7 +277,7 @@ private struct EmptyStateView: View {
 
             VStack(alignment: .leading, spacing: 12) {
                 step(1, "Click “Pair New Remote” below")
-                step(2, "Hold the red SYNC button inside the remote’s battery cover (or hold ① + ②)")
+                step(2, "Press the red SYNC button inside the remote’s battery cover")
                 step(3, "Release when paired — the remote connects automatically")
             }
 

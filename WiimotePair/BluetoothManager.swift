@@ -51,6 +51,8 @@ final class BluetoothManager: NSObject, ObservableObject {
     private var inquiry: IOBluetoothDeviceInquiry?
     private var pair: IOBluetoothDevicePair?
     private var pairAttempts = 0
+    /// Whether the current attempt got as far as exchanging the PIN.
+    private var pinRequested = false
 
     private var devicesByAddress: [String: IOBluetoothDevice] = [:]
     private var statusByAddress: [String: RemoteStatus] = [:]
@@ -488,20 +490,26 @@ final class BluetoothManager: NSObject, ObservableObject {
         sessionTimer = Timer.scheduledTimer(withTimeInterval: Self.sessionTimeout,
                                             repeats: false) { [weak self] _ in
             guard let self, self.session?.isInFlight == true else { return }
+            Log.error("pairing session timed out after \(Int(Self.sessionTimeout))s")
             self.stopInquiry()
             self.pair?.stop()
             self.pair = nil
-            self.session = .failed(message: "No Wii Remote answered. Hold the red SYNC button "
-                                   + "inside the battery cover (or hold ①+②) and try again.")
+            self.session = .failed(message: "No Wii Remote answered. Press the red SYNC button "
+                                   + "inside the battery cover and try again.")
         }
     }
 
-    private func pairingFailed(_ message: String) {
+    /// `retry: false` for authentication rejections: each further attempt
+    /// lengthens the remote's lockout of this Mac (Bluetooth "repeated attempts").
+    private func pairingFailed(_ message: String, retry: Bool = true) {
         pairAttempts += 1
-        guard pairAttempts < Self.maxPairAttempts else {
+        Log.error("pairing attempt \(pairAttempts)/\(Self.maxPairAttempts) failed: \(message)")
+        guard retry, pairAttempts < Self.maxPairAttempts else {
             stopInquiry()
             sessionTimer?.invalidate()
-            session = .failed(message: message + " (gave up after \(Self.maxPairAttempts) attempts)")
+            session = .failed(message: retry
+                              ? message + " (gave up after \(Self.maxPairAttempts) attempts)"
+                              : message)
             return
         }
         // Back off briefly, then re-run discovery for another attempt.
@@ -635,6 +643,8 @@ extension BluetoothManager: IOBluetoothDeviceInquiryDelegate {
         }
 
         sender.stop()
+        Log.info("[\(Self.key(for: device))] found unpaired remote; starting pairing "
+                 + "(attempt \(pairAttempts + 1)/\(Self.maxPairAttempts))")
 
         session = .pairing(name: device.name ?? "Wii Remote")
 
@@ -643,6 +653,7 @@ extension BluetoothManager: IOBluetoothDeviceInquiryDelegate {
             return
         }
         newPair.delegate = self
+        pinRequested = false
         // Force the delegate to always be queried for the PIN (private API).
         newPair.setUserDefinedPincode(true)
         pair = newPair
@@ -669,7 +680,12 @@ extension BluetoothManager: IOBluetoothDevicePairDelegate {
         guard let pair = sender as? IOBluetoothDevicePair,
               let device = pair.device(),
               let controller = IOBluetoothHostController.default(),
-              let addressString = controller.addressAsString() else { return }
+              let addressString = controller.addressAsString() else {
+            Log.error("PIN requested but the host controller address is unavailable")
+            return
+        }
+        Log.info("[\(Self.key(for: device))] PIN requested")
+        pinRequested = true
 
         var controllerAddress = BluetoothDeviceAddress()
         IOBluetoothNSStringToDeviceAddress(addressString, &controllerAddress)
@@ -692,7 +708,10 @@ extension BluetoothManager: IOBluetoothDevicePairDelegate {
             }
         }
 
-        guard let classicPeer = device.classicPeer() else { return }
+        guard let classicPeer = device.classicPeer() else {
+            Log.error("[\(Self.key(for: device))] no classic peer to send the PIN to")
+            return
+        }
         IOBluetoothCoreBluetoothCoordinator.sharedInstance()
             .pairPeer(classicPeer, forType: pair.currentPairingType(), withKey: NSNumber(value: key))
     }
@@ -703,10 +722,18 @@ extension BluetoothManager: IOBluetoothDevicePairDelegate {
 
         pair?.stop()
         pair = nil
+        Log.info("[\(Self.key(for: device))] pairing finished: \(Log.ioReturn(error))")
 
         if error != kIOReturnSuccess {
-            pairingFailed("Pairing failed: \(machDescription(error)). "
-                          + "Keep holding SYNC until pairing completes.")
+            // The error is a Bluetooth status, so mach_error_string would be misleading.
+            if pinRequested {
+                pairingFailed("The remote rejected the PIN. Make sure you press the red SYNC "
+                              + "button, then try again.", retry: false)
+            } else {
+                pairingFailed("The remote refused to pair, usually after earlier failed "
+                              + "attempts. Take its batteries out for a few seconds, put them "
+                              + "back, then try again.", retry: false)
+            }
             return
         }
 
