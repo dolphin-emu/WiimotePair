@@ -4,5 +4,6 @@
 @interface IOBluetoothDevice()
 
 - (id)classicPeer;
+- (void)remove;
 
 @end
